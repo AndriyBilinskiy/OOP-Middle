@@ -5,7 +5,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Setter
 @Getter
-public class Response {
+public class CompanyInfo {
     private String name;
     private String twitter;
     private String facebook;
