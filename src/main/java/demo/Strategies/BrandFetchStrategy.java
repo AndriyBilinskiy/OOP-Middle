@@ -1,6 +1,9 @@
+package demo.Strategies;
+
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
+import demo.CompanyInfo;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;

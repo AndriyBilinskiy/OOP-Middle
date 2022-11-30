@@ -17,7 +17,7 @@ public class TestParser {
     public static void main(String[] args) throws UnirestException {
 
         Unirest.setTimeouts(0, 0);
-        HttpResponse<String> response = Unirest.get("https://api.brandfetch.io/v2/brands/bolt.eu").header("Authorization", "Bearer t9vuxOvjntawgEZsKxW53gmnRiUELR2LTx3mIsFsigE=")
+        HttpResponse<String> response = Unirest.get("https://api.brandfetch.io/v2/brands/www.tesla.com").header("Authorization", "Bearer t9vuxOvjntawgEZsKxW53gmnRiUELR2LTx3mIsFsigE=")
                 .asString();
         String stringResponse = response.getBody();
         JSONObject json = new JSONObject(stringResponse);
@@ -28,5 +28,6 @@ public class TestParser {
                 System.out.println(curLink.getString("url"));
             }
         }
+        System.out.println(response.getBody());
     }
 }
