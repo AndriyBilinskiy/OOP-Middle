@@ -1,11 +1,5 @@
-package demo;
+package com.midterm.demo;
 
-import demo.Strategies.BrandFetchStrategy;
-import demo.Strategies.DomainParsingStrategy;
-import demo.Strategies.Strategy;
-
-import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class StrategiesMerger {

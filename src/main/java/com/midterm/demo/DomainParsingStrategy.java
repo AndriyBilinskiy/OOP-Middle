@@ -1,7 +1,5 @@
-package demo.Strategies;
+package com.midterm.demo;
 
-import com.mashape.unirest.http.exceptions.UnirestException;
-import demo.CompanyInfo;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;

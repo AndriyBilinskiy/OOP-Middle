@@ -1,4 +1,4 @@
-package demo;
+package com.midterm.demo;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,7 +16,6 @@ public class CompanyInfo {
     @Id @GeneratedValue
     private int id;
     private String name;
-    @Column(unique = true)
     private String twitter;
     private String facebook;
     private String logo;
