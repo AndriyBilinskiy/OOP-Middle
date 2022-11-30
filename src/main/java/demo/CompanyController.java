@@ -14,15 +14,23 @@ import java.util.Optional;
 public class CompanyController {
 
     private final CompanyService companyService;
+    private final StrategiesMerger strategiesMerger;
     @Autowired
     public CompanyController(CompanyService companyService) {
         this.companyService = companyService;
+        this.strategiesMerger = new StrategiesMerger();
     }
 
     @GetMapping
-    public Optional<CompanyInfo> getCompanyInfo(String name) {
-        //TODO
-        return companyService.getCompanyInfo(name);
+    public Optional<CompanyInfo> getCompanyInfo(String link) {
+        if (companyService.getCompanyInfo(link).isEmpty()) {
+            CompanyInfo res = strategiesMerger.getData(link);
+            companyService.addCompanyInfo(res);
+            return Optional.ofNullable(res);
+        }else {
+            return companyService.getCompanyInfo(link);
+        }
+
     }
     @PostMapping
     public void addCompanyInfo(CompanyInfo companyInfo) {

@@ -5,13 +5,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.json.JSONObject;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @NoArgsConstructor
 @Setter
 @Getter
+@Entity
+@Table
 public class CompanyInfo {
     @Id @GeneratedValue
     private int id;
@@ -19,8 +19,8 @@ public class CompanyInfo {
     @Column(unique = true)
     private String twitter;
     private String facebook;
-    private JSONObject logo;
-    private JSONObject icon;
+    private String logo;
+    private String icon;
     private String employees;
     private String address;
 
