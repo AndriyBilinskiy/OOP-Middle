@@ -19,8 +19,12 @@ public class BrandFetchStrategy implements Strategy {
             Unirest.setTimeouts(0, 0);
             HttpResponse<String> response = Unirest.get("https://api.brandfetch.io/v2/brands/"+link).header("Authorization", "Bearer t9vuxOvjntawgEZsKxW53gmnRiUELR2LTx3mIsFsigE=")
                     .asString();
+
             JSONObject json = new JSONObject(response.getBody());
-            companyInfo.setName(json.getString("name"));
+            try {
+
+                companyInfo.setName(json.getString("name"));
+            } catch (JSONException ignored){}
             JSONArray links = json.getJSONArray("links");
             JSONArray logos = json.getJSONArray("logos");
             for (int i = 0; i < links.length(); i++){

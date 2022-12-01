@@ -5,7 +5,7 @@ import com.midterm.demo.CompanyInfo;
 import java.util.List;
 
 public class StrategiesMerger {
-    List <Strategy> strategies = List.of(new BrandFetchStrategy(), new GoogleSearchStrategy());
+    List <Strategy> strategies = List.of(new BrandFetchStrategy(), new GoogleSearchStrategy(), new WikiParsingStrategy());
     public CompanyInfo getData(String link) {
         CompanyInfo result = new CompanyInfo();
         for (int i = 0; i < strategies.toArray().length; i++) {

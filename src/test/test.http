@@ -1,1 +1,1 @@
-GET localhost:8080/companies?link=bolt.eu
+GET localhost:8080/companies?link=github.com

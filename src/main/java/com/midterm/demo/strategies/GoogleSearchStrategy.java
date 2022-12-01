@@ -20,15 +20,12 @@ public class GoogleSearchStrategy implements Strategy {
                 .apiKey(API_KEY)
                 .build();
         PlacesSearchResponse placesResponse = new TextSearchRequest(context).query(link).await();
-        companyInfo.setAddress(placesResponse.results[0].formattedAddress);
-        companyInfo.setName(placesResponse.results[0].name);
-        companyInfo.setIcon(placesResponse.results[0].icon.toString());
-
-        String placeId = placesResponse.results[0].placeId;
-        PlaceDetails placeDetails = new PlaceDetailsRequest(context).placeId(placeId).await();
-        System.out.format("Place ID %s\n",  placeId);
-        System.out.format(String.valueOf(placesResponse.results[0].icon));
-        context.shutdown();
+        try {
+            companyInfo.setAddress(placesResponse.results[0].formattedAddress);
+            companyInfo.setName(placesResponse.results[0].name);
+            companyInfo.setIcon(placesResponse.results[0].icon.toString());
+            context.shutdown();
+        }catch (ArrayIndexOutOfBoundsException ignored){}
         return companyInfo;
     }
 }
