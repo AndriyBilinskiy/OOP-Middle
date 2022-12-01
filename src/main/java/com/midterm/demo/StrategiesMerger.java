@@ -13,6 +13,7 @@ public class StrategiesMerger {
     List <Strategy> strategies = List.of(new BrandFetchStrategy(), new GoogleSearchStrategy(), new WikiParsingStrategy());
     public CompanyInfo getData(String link) {
         CompanyInfo result = new CompanyInfo();
+        result.setLink(link);
         for (int i = 0; i < strategies.toArray().length; i++) {
             CompanyInfo curRes = strategies.get(i).getData(link);
             if (result.getAddress() == null) {

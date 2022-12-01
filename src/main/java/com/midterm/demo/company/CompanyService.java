@@ -9,8 +9,8 @@ import java.util.Optional;
 public class CompanyService {
     @Autowired
     CompanyRepository companyRepository;
-    public Optional<CompanyInfo> getCompanyInfo(String name) {
-        return companyRepository.findCompanyInfoByName(name);
+    public Optional<CompanyInfo> getCompanyInfo(String link) {
+        return companyRepository.findCompanyInfoByLink(link);
     }
     public void addCompanyInfo(CompanyInfo companyInfo){
         companyRepository.save(companyInfo);
