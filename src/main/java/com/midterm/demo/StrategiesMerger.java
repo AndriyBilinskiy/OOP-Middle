@@ -1,6 +1,11 @@
-package com.midterm.demo.strategies;
+package com.midterm.demo;
 
-import com.midterm.demo.CompanyInfo;
+import com.midterm.demo.company.CompanyInfo;
+import com.midterm.demo.strategies.BrandFetchStrategy;
+import com.midterm.demo.strategies.GoogleSearchStrategy;
+import com.midterm.demo.strategies.Strategy;
+import com.midterm.demo.strategies.WikiParsingStrategy;
+
 
 import java.util.List;
 

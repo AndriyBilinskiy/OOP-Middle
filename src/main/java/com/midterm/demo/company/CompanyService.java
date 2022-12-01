@@ -1,4 +1,4 @@
-package com.midterm.demo;
+package com.midterm.demo.company;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

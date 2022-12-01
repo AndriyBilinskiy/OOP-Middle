@@ -1,12 +1,11 @@
 package com.midterm.demo.strategies;
 
-import com.midterm.demo.CompanyInfo;
+import com.midterm.demo.company.CompanyInfo;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import java.io.IOException;
-import java.util.Objects;
 
 public class WikiParsingStrategy implements Strategy {
     @Override

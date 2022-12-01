@@ -1,4 +1,4 @@
-package com.midterm.demo;
+package com.midterm.demo.company;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

@@ -1,14 +1,10 @@
 package com.midterm.demo.strategies;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.maps.GeoApiContext;
-import com.google.maps.PlaceDetailsRequest;
 import com.google.maps.TextSearchRequest;
-import com.google.maps.model.PlaceDetails;
 import com.google.maps.model.PlacesSearchResponse;
 import lombok.SneakyThrows;
-import com.midterm.demo.CompanyInfo;
+import com.midterm.demo.company.CompanyInfo;
 
 public class GoogleSearchStrategy implements Strategy {
     @Override

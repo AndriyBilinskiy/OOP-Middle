@@ -1,6 +1,6 @@
-package com.midterm.demo;
+package com.midterm.demo.company;
 
-import com.midterm.demo.strategies.StrategiesMerger;
+import com.midterm.demo.StrategiesMerger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
