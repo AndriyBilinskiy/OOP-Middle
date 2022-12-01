@@ -1,5 +1,6 @@
 package com.midterm.demo;
 
+import com.midterm.demo.strategies.StrategiesMerger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,7 +22,7 @@ public class CompanyController {
         this.strategiesMerger = new StrategiesMerger();
     }
 
-    @GetMapping
+    @GetMapping(path = "companies")
     public Optional<CompanyInfo> getCompanyInfo(String link) {
         if (companyService.getCompanyInfo(link).isEmpty()) {
             CompanyInfo res = strategiesMerger.getData(link);

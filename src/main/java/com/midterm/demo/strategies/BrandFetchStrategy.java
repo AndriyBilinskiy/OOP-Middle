@@ -1,8 +1,10 @@
-package com.midterm.demo;
+package com.midterm.demo.strategies;
 
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
+import com.midterm.demo.CompanyInfo;
+import com.midterm.demo.Strategy;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -34,7 +36,7 @@ public class BrandFetchStrategy implements Strategy {
                 }catch (JSONException ignored){}
             }
             for (int i = 0; i < logos.length(); i++) {
-                JSONObject current = links.getJSONObject(i);
+                JSONObject current = logos.getJSONObject(i);
                 try {
                     if (Objects.equals(current.getString("type"), "logo")) {
                         companyInfo.setLogo(current.getJSONArray("formats").getJSONObject(0).getString("src"));

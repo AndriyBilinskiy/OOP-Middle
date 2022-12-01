@@ -1,9 +1,12 @@
-package com.midterm.demo;
+package com.midterm.demo.strategies;
+
+import com.midterm.demo.CompanyInfo;
+import com.midterm.demo.Strategy;
 
 import java.util.List;
 
 public class StrategiesMerger {
-    List <Strategy> strategies = List.of(new BrandFetchStrategy(), new DomainParsingStrategy());
+    List <Strategy> strategies = List.of(new BrandFetchStrategy());
     public CompanyInfo getData(String link) {
         CompanyInfo result = new CompanyInfo();
         for (int i = 0; i < strategies.toArray().length; i++) {

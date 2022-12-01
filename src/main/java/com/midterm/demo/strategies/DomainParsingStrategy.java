@@ -1,5 +1,7 @@
-package com.midterm.demo;
+package com.midterm.demo.strategies;
 
+import com.midterm.demo.CompanyInfo;
+import com.midterm.demo.Strategy;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;

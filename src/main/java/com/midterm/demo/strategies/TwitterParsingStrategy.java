@@ -1,4 +1,7 @@
-package com.midterm.demo;
+package com.midterm.demo.strategies;
+
+import com.midterm.demo.CompanyInfo;
+import com.midterm.demo.Strategy;
 
 public class TwitterParsingStrategy implements Strategy {
     @Override
