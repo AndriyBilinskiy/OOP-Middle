@@ -17,6 +17,7 @@ public class CompanyInfo {
     @Id @GeneratedValue @JsonIgnore
     private int id;
     private String name;
+    @Column(unique = true)
     private String twitter;
     private String facebook;
     private String logo;
