@@ -17,9 +17,8 @@ import javax.persistence.*;
 public class CompanyInfo {
     @Id @GeneratedValue @JsonIgnore
     private int id;
-    @JsonIgnore
+    @JsonIgnore @Column(unique = true)
     private String link;
-    @Column(unique = true)
     private String name;
     private String twitter;
     private String facebook;
