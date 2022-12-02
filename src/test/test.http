@@ -6,4 +6,4 @@ Content-Type: application/json
 
 ###
 
-GET localhost:8080/companies/?link=tesla.com
+GET localhost:8080/companies/?link=mcdonalds.com

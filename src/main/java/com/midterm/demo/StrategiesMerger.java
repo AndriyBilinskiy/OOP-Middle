@@ -1,17 +1,14 @@
 package com.midterm.demo;
 
 import com.midterm.demo.company.CompanyInfo;
-import com.midterm.demo.strategies.BrandFetchStrategy;
-import com.midterm.demo.strategies.GoogleSearchStrategy;
-import com.midterm.demo.strategies.Strategy;
-import com.midterm.demo.strategies.WikiParsingStrategy;
+import com.midterm.demo.strategies.*;
 
 
 import java.util.List;
 
 public class StrategiesMerger {
     List <Strategy> strategies = List.of(new BrandFetchStrategy(), new GoogleSearchStrategy(),
-            new WikiParsingStrategy());
+            new PDLParsingStrategy(), new WikiParsingStrategy(), new DomainParsingStrategy());
     public CompanyInfo getData(String link) {
         CompanyInfo result = new CompanyInfo();
         result.setLink(link);
