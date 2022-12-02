@@ -19,6 +19,7 @@ public class CompanyInfo {
     private int id;
     @JsonIgnore @Column(unique = true)
     private String link;
+    @Column(unique = true)
     private String name;
     private String twitter;
     private String facebook;
